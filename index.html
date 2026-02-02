@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Professional CV and Portfolio of Shaiq Raza, Full Stack Developer">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Shaiq Raza - Full Stack Developer | CV & Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header with Theme Toggle -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1 class="name">Shaiq Raza</h1>
+                <p class="title">Full Stack Developer</p>
+            </div>
+            <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section with Photo -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="photo-container">
+                    <img src="images/profile.jpg" alt="Profile Photo" class="profile-photo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22 viewBox=%220 0 200 200%22%3E%3Crect fill=%22%23ddd%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2224%22 fill=%22%23999%22 text-anchor=%22middle%22 dy=%22.3em%22%3EPhoto%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="hero-text">
+                    <h2>Welcome to My Portfolio</h2>
+                    <p>I'm a passionate developer dedicated to creating amazing digital experiences.</p>
+                    <a href="cv.pdf" download class="download-cv-btn">📥 Download CV</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section about-section">
+            <div class="section-container">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-content">
+                    I am a dedicated and passionate professional with a strong background in web development. 
+                    With expertise in creating responsive and user-friendly applications, I strive to deliver 
+                    high-quality solutions that exceed expectations. I'm committed to continuous learning and 
+                    staying updated with the latest technologies and industry trends.
+                </p>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section education-section">
+            <div class="section-container">
+                <h2 class="section-title">Education</h2>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <p class="institution">FAST NUCES lahore</p>
+                        <p class="duration">2023 - present</p>
+                        <p class="details">CGPA: 2.4/4.0 | Relevant Coursework: Web Development, Database Management, Software Engineering</p>
+                    </div>
+                    <div class="education-card">
+                        <h3>Intermediate in Computer Science</h3>
+                        <p class="institution">PGC Gujranwala</p>
+                        <p class="duration">2021 - 2023</p>
+                        <p class="details">Percentage: 84% | Focus: Computer Science and Mathematics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="section-container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Responsive Design</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Express</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">REST APIs</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Platforms</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience / Projects Section -->
+        <section id="experience" class="section experience-section">
+            <div class="section-container">
+                <h2 class="section-title">Experience & Projects</h2>
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3>E-Commerce Platform</h3>
+                            <span class="tag">2023 - 2024</span>
+                        </div>
+                        <p class="role">Full Stack Developer</p>
+                        <p class="description">
+                            Built a complete e-commerce platform with user authentication, product management, 
+                            and secure payment integration. Implemented responsive UI with React and backend with Node.js.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech">React</span>
+                            <span class="tech">Node.js</span>
+                            <span class="tech">MongoDB</span>
+                            <span class="tech">Stripe API</span>
+                        </div>
+                    </div>
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3>Task Management App</h3>
+                            <span class="tag">2023</span>
+                        </div>
+                        <p class="role">Frontend Developer</p>
+                        <p class="description">
+                            Created a collaborative task management application with real-time updates, 
+                            user roles, and notifications. Focused on intuitive UI/UX design.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech">JavaScript</span>
+                            <span class="tech">HTML5</span>
+                            <span class="tech">CSS3</span>
+                            <span class="tech">Firebase</span>
+                        </div>
+                    </div>
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3>Weather Dashboard</h3>
+                            <span class="tag">2022</span>
+                        </div>
+                        <p class="role">Junior Developer</p>
+                        <p class="description">
+                            Developed a real-time weather application with location search, forecast data, 
+                            and interactive charts. Integrated with OpenWeather API.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech">JavaScript</span>
+                            <span class="tech">Chart.js</span>
+                            <span class="tech">REST API</span>
+                            <span class="tech">CSS Flexbox</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="section-container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <p class="contact-label">Email</p>
+                                <a href="mailto:your.email@example.com">heyshaiq@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <div>
+                                <p class="contact-label">Phone</p>
+                                <a href="tel:+1234567890">+923236696510</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🔗</span>
+                            <div>
+                                <p class="contact-label">LinkedIn</p>
+                                <a href="https://www.linkedin.com/in/shaiq-raza/" target="_blank">linkedin.com/in/shaiq-raza/</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">💻</span>
+                            <div>
+                                <p class="contact-label">GitHub</p>
+                                <a href="https://github.com/ShaiqRaza/" target="_blank">github.com/ShaiqRaza/</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                        <p class="form-note">Note: This is a demo form. In a production environment, you would need a backend service to handle submissions.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Shaiq Raza. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
