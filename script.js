@@ -187,65 +187,6 @@ function showNotification(message, type) {
 }
 
 // ================================
-// Smooth Scrolling for Navigation Links
-// ================================
-
-function initializeSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            
-            // Skip if href is just "#"
-            if (href === '#') return;
-            
-            const target = document.querySelector(href);
-            if (target) {
-                e.preventDefault();
-                
-                // Calculate offset for sticky navbar
-                const offsetTop = target.offsetTop - 250;
-                
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-}
-
-// ================================
-// Intersection Observer for Fade-in Effects
-// ================================
-
-function initializeIntersectionObserver() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-    
-    // Observe cards and elements
-    document.querySelectorAll(
-        '.education-card, .skill-category, .experience-card, .contact-item'
-    ).forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(element);
-    });
-}
-
-// ================================
 // Active Navigation Link
 // ================================
 
@@ -322,12 +263,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Contact form
     initializeContactForm();
     
-    // Smooth scrolling
-    initializeSmoothScroll();
-    
-    // Intersection observer for fade-in effects
-    initializeIntersectionObserver();
-    
     // Active navigation link
     initializeActiveNavLink();
     
@@ -380,60 +315,4 @@ function optimizeMobileViewport() {
             initializeIntersectionObserver();
         }, 250);
     });
-}
-
-// ================================
-// Keyboard Navigation
-// ================================
-
-document.addEventListener('keydown', function(e) {
-    // Press 'Escape' to close any potential modals or overlays
-    if (e.key === 'Escape') {
-        // Add any escape key functionality here
-    }
-    
-    // Ctrl/Cmd + K to focus search (future feature)
-    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-        e.preventDefault();
-        // Add search functionality here if needed
-    }
-});
-
-// ================================
-// Touch Support Enhancement
-// ================================
-
-// Prevent double-tap zoom on buttons
-document.addEventListener('touchend', function(e) {
-    if (e.target.tagName === 'BUTTON' || e.target.closest('button')) {
-        e.preventDefault();
-        e.target.closest('button').click();
-    }
-}, { passive: false });
-
-// ================================
-// Lazy Load Images (if needed)
-// ================================
-
-function initializeLazyLoading() {
-    if ('IntersectionObserver' in window) {
-        const images = document.querySelectorAll('img[data-src]');
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                    imageObserver.unobserve(img);
-                }
-            });
-        });
-        
-        images.forEach(img => imageObserver.observe(img));
-    }
-}
-
-// Initialize lazy loading if images have data-src attribute
-if (document.querySelectorAll('img[data-src]').length > 0) {
-    document.addEventListener('DOMContentLoaded', initializeLazyLoading);
 }
